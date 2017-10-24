@@ -1,0 +1,92 @@
+I, [2017-10-24T16:40:12.540643 #10429]  INFO -- Nagios-centos-69: -----> Creating <Nagios-centos-69>...
+I, [2017-10-24T16:40:13.809629 #10429]  INFO -- Nagios-centos-69: The provider 'virtualbox' that was requested to back the machine
+I, [2017-10-24T16:40:13.809731 #10429]  INFO -- Nagios-centos-69: 'default' is reporting that it isn't usable on this system. The
+I, [2017-10-24T16:40:13.809760 #10429]  INFO -- Nagios-centos-69: reason is shown below:
+I, [2017-10-24T16:40:13.809780 #10429]  INFO -- Nagios-centos-69: 
+I, [2017-10-24T16:40:13.809804 #10429]  INFO -- Nagios-centos-69: Vagrant could not detect VirtualBox! Make sure VirtualBox is properly installed.
+I, [2017-10-24T16:40:13.809830 #10429]  INFO -- Nagios-centos-69: Vagrant uses the `VBoxManage` binary that ships with VirtualBox, and requires
+I, [2017-10-24T16:40:13.809849 #10429]  INFO -- Nagios-centos-69: this to be available on the PATH. If VirtualBox is installed, please find the
+I, [2017-10-24T16:40:13.810283 #10429]  INFO -- Nagios-centos-69: `VBoxManage` binary and add it to the PATH environmental variable.
+E, [2017-10-24T16:40:14.085951 #10429] ERROR -- Nagios-centos-69: Create failed on instance <Nagios-centos-69>.
+E, [2017-10-24T16:40:14.086240 #10429] ERROR -- Nagios-centos-69: ------Exception-------
+E, [2017-10-24T16:40:14.086278 #10429] ERROR -- Nagios-centos-69: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2017-10-24T16:40:14.086298 #10429] ERROR -- Nagios-centos-69: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: 
+STDERR: The provider 'virtualbox' that was requested to back the machine
+'default' is reporting that it isn't usable on this system. The
+reason is shown below:
+
+Vagrant could not detect VirtualBox! Make sure VirtualBox is properly installed.
+Vagrant uses the `VBoxManage` binary that ships with VirtualBox, and requires
+this to be available on the PATH. If VirtualBox is installed, please find the
+`VBoxManage` binary and add it to the PATH environmental variable.
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2017-10-24T16:40:14.086315 #10429] ERROR -- Nagios-centos-69: ----------------------
+E, [2017-10-24T16:40:14.086331 #10429] ERROR -- Nagios-centos-69: ------Backtrace-------
+E, [2017-10-24T16:40:14.086354 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/shell_out.rb:71:in `rescue in run_command'
+E, [2017-10-24T16:40:14.086373 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2017-10-24T16:40:14.086389 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-vagrant-1.1.0/lib/kitchen/driver/vagrant.rb:434:in `run_command'
+E, [2017-10-24T16:40:14.086404 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-vagrant-1.1.0/lib/kitchen/driver/vagrant.rb:381:in `run'
+E, [2017-10-24T16:40:14.086419 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-vagrant-1.1.0/lib/kitchen/driver/vagrant.rb:465:in `run_vagrant_up'
+E, [2017-10-24T16:40:14.086434 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-vagrant-1.1.0/lib/kitchen/driver/vagrant.rb:105:in `create'
+E, [2017-10-24T16:40:14.086448 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:460:in `public_send'
+E, [2017-10-24T16:40:14.086463 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:460:in `block in perform_action'
+E, [2017-10-24T16:40:14.086477 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:524:in `block in synchronize_or_call'
+E, [2017-10-24T16:40:14.086592 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:522:in `synchronize'
+E, [2017-10-24T16:40:14.086637 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:522:in `synchronize_or_call'
+E, [2017-10-24T16:40:14.086665 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-10-24T16:40:14.086679 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-10-24T16:40:14.086692 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-10-24T16:40:14.086704 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:460:in `perform_action'
+E, [2017-10-24T16:40:14.086717 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:370:in `create_action'
+E, [2017-10-24T16:40:14.086737 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-10-24T16:40:14.086749 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-10-24T16:40:14.086761 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-10-24T16:40:14.086780 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:135:in `converge'
+E, [2017-10-24T16:40:14.086796 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-10-24T16:40:14.086872 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-10-24T16:40:14.086888 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-10-24T16:40:14.086901 #10429] ERROR -- Nagios-centos-69: ----End Backtrace-----
+E, [2017-10-24T16:40:14.086913 #10429] ERROR -- Nagios-centos-69: ---Nested Exception---
+E, [2017-10-24T16:40:14.086924 #10429] ERROR -- Nagios-centos-69: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2017-10-24T16:40:14.086935 #10429] ERROR -- Nagios-centos-69: Message: Expected process to exit with [0], but received '1'
+---- Begin output of vagrant up --no-provision --provider virtualbox ----
+STDOUT: 
+STDERR: The provider 'virtualbox' that was requested to back the machine
+'default' is reporting that it isn't usable on this system. The
+reason is shown below:
+
+Vagrant could not detect VirtualBox! Make sure VirtualBox is properly installed.
+Vagrant uses the `VBoxManage` binary that ships with VirtualBox, and requires
+this to be available on the PATH. If VirtualBox is installed, please find the
+`VBoxManage` binary and add it to the PATH environmental variable.
+---- End output of vagrant up --no-provision --provider virtualbox ----
+Ran vagrant up --no-provision --provider virtualbox returned 1
+E, [2017-10-24T16:40:14.086947 #10429] ERROR -- Nagios-centos-69: ----------------------
+E, [2017-10-24T16:40:14.086966 #10429] ERROR -- Nagios-centos-69: ------Backtrace-------
+E, [2017-10-24T16:40:14.086981 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/shell_out.rb:71:in `rescue in run_command'
+E, [2017-10-24T16:40:14.087054 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2017-10-24T16:40:14.087072 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-vagrant-1.1.0/lib/kitchen/driver/vagrant.rb:434:in `run_command'
+E, [2017-10-24T16:40:14.087088 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-vagrant-1.1.0/lib/kitchen/driver/vagrant.rb:381:in `run'
+E, [2017-10-24T16:40:14.087101 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-vagrant-1.1.0/lib/kitchen/driver/vagrant.rb:465:in `run_vagrant_up'
+E, [2017-10-24T16:40:14.087113 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/kitchen-vagrant-1.1.0/lib/kitchen/driver/vagrant.rb:105:in `create'
+E, [2017-10-24T16:40:14.087125 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:460:in `public_send'
+E, [2017-10-24T16:40:14.087136 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:460:in `block in perform_action'
+E, [2017-10-24T16:40:14.087148 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:524:in `block in synchronize_or_call'
+E, [2017-10-24T16:40:14.087168 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:522:in `synchronize'
+E, [2017-10-24T16:40:14.087183 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:522:in `synchronize_or_call'
+E, [2017-10-24T16:40:14.087195 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:489:in `block in action'
+E, [2017-10-24T16:40:14.087207 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/2.4.0/benchmark.rb:293:in `measure'
+E, [2017-10-24T16:40:14.087219 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:488:in `action'
+E, [2017-10-24T16:40:14.087230 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:460:in `perform_action'
+E, [2017-10-24T16:40:14.087242 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:370:in `create_action'
+E, [2017-10-24T16:40:14.087253 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2017-10-24T16:40:14.087265 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `each'
+E, [2017-10-24T16:40:14.087284 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2017-10-24T16:40:14.087299 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/instance.rb:135:in `converge'
+E, [2017-10-24T16:40:14.087311 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2017-10-24T16:40:14.087323 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2017-10-24T16:40:14.087335 #10429] ERROR -- Nagios-centos-69: /opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/test-kitchen-1.16.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2017-10-24T16:40:14.087346 #10429] ERROR -- Nagios-centos-69: ----End Backtrace-----
